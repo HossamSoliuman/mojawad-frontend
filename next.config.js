@@ -27,7 +27,6 @@ const nextConfig = {
 
   async rewrites() {
     return [
-      // Proxy /api calls to Laravel during development so no CORS needed
       {
         source: '/api/:path*',
         destination: `${process.env.NEXT_PUBLIC_API_URL}/api/:path*`,
